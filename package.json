@@ -16,7 +16,7 @@
     "scripts": {
         "start": "cds run",
         "env": "cp ./default-env.json ./db/default-env.json && cp ./default-env.json ./srv/default-env.json",
-        "build":"cds build/all --clean"
+        "build": "cds build/all --clean"
     },
     "eslintConfig": {
         "extends": "eslint:recommended",
@@ -44,27 +44,28 @@
         }
     },
     "cds": {
-        "build":{
-            "target":".",
-            "tasks":[
+        "build": {
+            "target": ".",
+            "tasks": [
                 {
-                    "src":"db",
-                    "for":"hana",
-                    "options":{
-                      "model":[
-                          "db",
-                          "srv"
-                      ]  
+                    "src": "db",
+                    "for": "hana",
+                    "options": {
+                        "model": [
+                            "db",
+                            "srv"
+                        ]
                     }
-                },{
-                   "src":"db",
-                    "for":"node-cf",
-                    "options":{
-                      "model":[
-                          "db",
-                          "srv"
-                      ]  
-                    }  
+                },
+                {
+                    "src": "db",
+                    "for": "node-cf",
+                    "options": {
+                        "model": [
+                            "db",
+                            "srv"
+                        ]
+                    }
                 }
             ]
         },
